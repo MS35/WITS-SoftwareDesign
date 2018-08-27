@@ -7,9 +7,10 @@
  */
 
 namespace Projects\Maths;
+use PHPUnit\Framework\TestCase;
 
 
-class calcTest extends \PHPUnit_Framework_TestCase
+class calcTest extends TestCase
 {
 
     private $calc;
