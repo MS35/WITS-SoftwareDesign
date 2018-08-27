@@ -6,9 +6,7 @@
  * Time: 9:18 PM
  */
 
-namespace Projects\Maths;
 use PHPUnit\Framework\TestCase;
-use Projects\Maths\Calculator;
 
 class calcTest extends TestCase
 {
