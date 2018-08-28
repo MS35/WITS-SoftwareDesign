@@ -10,5 +10,4 @@ before_install:
   - travis_retry composer self-update
   - composer install
 script: 
-  - phpunit 
-  - bin/atoum --test-all
+  - phpunit --configuration test/phpunit.xml
