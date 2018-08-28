@@ -1,7 +1,9 @@
 <?php
 class calc{
-    public function add($i,$j){
-        return $i+$j;
+    function word()
+    {
+        $s = "dude";
+        return $s;
     }
 }
 ?>
