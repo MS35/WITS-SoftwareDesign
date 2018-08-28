@@ -2,30 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: singi
- * Date: 2018/08/27
- * Time: 9:18 PM
+ * Date: 2018/08/28
+ * Time: 9:22 AM
  */
 
-use PHPUnit\Framework\TestCase;
+include("calc.php");
 
-class calcTest extends TestCase
+class calcTest extends \PHPUnit_Framework_TestCase
 {
-
-    private $calc;
-    public function __construct()
+    public function testWord()
     {
-        $this->calc = new calc();
-        parent::__construct();
+        $calcc = new calc();
+        /** @var TYPE_NAME $calcc */
+        assertContains($calcc,"dude");
     }
-    public function testInstanceCalculator()
-    {
-        $this->assertInstanceOf(calc::class, $this->calc);
-    }
-
-    public function testAdd()
-    {
-        $value = $this->calc->add(2, 3);
-        $this->assertEquals($value, 5);
-    }
-
 }
+?>
