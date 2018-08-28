@@ -1,6 +1,6 @@
 {"autoload": {
         "classmap": [
-            "/"
+            "file/"
         ]
     },
     "require-dev": {
