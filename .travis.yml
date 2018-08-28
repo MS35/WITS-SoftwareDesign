@@ -11,3 +11,4 @@ before_install:
   - composer install
 script: 
   - phpunit 
+  - bin/atoum --test-all
