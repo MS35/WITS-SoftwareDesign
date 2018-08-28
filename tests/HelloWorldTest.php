@@ -1,6 +1,6 @@
 <?php
 /**
- * @coversDefaultClass \MS35\WITS-SoftwareDesign\HelloWorld
+ * @coversDefaultClass \MS35\WITS_SoftwareDesign\HelloWorld
  */
 class HelloWorldTest extends \PHPUnit_Framework_TestCase{
   protected $hello;
