@@ -8,3 +8,4 @@ before_install:
   - composer install
 script: 
   - "phpunit --testsuite=unit"
+  
