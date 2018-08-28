@@ -1,15 +1,9 @@
-  {"require": {
-    "php": "7.1.11"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "7.3"
-  },
-    "autoload": {
-    "classmap": [
-      "calc.php"
-    ]
-  },
-  "scripts": {
-    "test": "phpunit"
-  }
-  }
+{"autoload": {
+        "classmap": [
+            "/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
