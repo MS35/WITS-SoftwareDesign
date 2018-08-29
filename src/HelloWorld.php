@@ -1,7 +1,7 @@
 <?php
 namespace MS35\WitsSoftwareDesign;
 class HelloWorld{
-  public funcion world(){
+  public function world(){
     return 'world';
   }
 }
