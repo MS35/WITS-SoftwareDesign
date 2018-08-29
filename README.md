@@ -9,10 +9,10 @@
 Contributers: Motheo Sekgetho
               Masingita Rikhotso
               Lehlohonolo Motsi
-              Thandi Tsabalala (Scrum Master)
-              Mohammed 
+              Thandi Tshabalala (Scrum Master)
+              Muhammed Variawa
               
-Project     : Lecture Venue and Test Date Scheduling
+Project     : Class Venue Allocation
 
 Decription  : Who ever is in charge of assiging lecture venues and
               tests, as per request by the lecturers, should
