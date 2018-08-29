@@ -1,8 +1,8 @@
 {
     "autoload": {
         "psr-4": {
-            "MS35\\WITS-SoftwareDesign\\": "src/",
-            "MS35\\WITS-SoftwareDesign\\Tests\\": "tests/"
+            "MS35\\WitsSoftwareDesign\\": "src/",
+            "MS35\\WitsSoftwareDesign\\Tests\\": "tests/"
         }
     }
 }
