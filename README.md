@@ -1,7 +1,7 @@
 #WITS-SoftwareDesign
 # WITS-SoftwareDesign
 # WITS-SoftwareDesign
-[![Build Status](https://travis-ci.org/MS35/WITS-SoftwareDesign.svg?branch=dev)](https://travis-ci.org/MS35/WITS-SoftwareDesign)
+[![Build Status](https://travis-ci.org/MS35/WitsSoftwareDesign.svg?branch=dev)](https://travis-ci.org/MS35/WitsSoftwareDesign)
 <a href='https://coveralls.io/github/MS35/WITS-SoftwareDesign?branch=dev'>
 <img src='https://coveralls.io/repos/github/MS35/WITS-SoftwareDesign/badge.svg?branch=dev' alt='Coverage Status' />
 </a>
