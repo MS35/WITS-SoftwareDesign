@@ -1,16 +1,22 @@
 <html>
   <head>
+    <meta charset="utf-8">
     <title>CRUD</title>
       <link rel="stylesheet" type="text/css" href="navigate_style.css">
+
     <body>
       <div class="optionbox">
-        <h1 style="color: white;">Select An Option</h1>
-      <form>
-        <input type="submit" name="create" value="Create">
-        <input type="submit" name="update" value="Update">
-        <input type="submit" name="view"   value="View"  >
-        <input type="submit" name="delete" value="Delete">
+        <h1 style="color: blue;">Select An Option</h1>
+      <form name="crud">
+        <input type="submit" name="create" value="Create" onclick="create()">
+        <input type="submit" name="update" value="Update" onclick="update()">
+        <input type="submit" name="view"   value="View" onclick="view()" >
+        <input type="submit" name="delete" value="Delete" onclick="delete()">
       </form>
     </body>
   </head>
+
+  <footer>
+    <script src="navigate.js"></script>
+  </footer>
 </html>

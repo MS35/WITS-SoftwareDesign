@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(wits_logo3_1.png);
+  background: url(../resources/wits_logo3_1.png);
   background-size: auto;
   background-position: center;
   font-family: sans-serif;
@@ -24,6 +24,9 @@ h1{
   position: absolute;
   transform: translate(-50%,-50%);
   box-sizing: border-box;
+  background: url(../resources/kudu_logo.jpg);
+  background-size: 150%;
+  background-position: center;
   padding: 70px 30px;
 }
 
