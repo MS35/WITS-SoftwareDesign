@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MS35\\WitsSoftwareDesign\\": "src/",
+            "MS35\\WitsSoftwareDesign\\Tests\\": "tests/"
+        }
+    }
+}
