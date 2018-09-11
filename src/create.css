@@ -21,6 +21,7 @@ h2{
   text-align: justify;
   transform: translate(20%, -120%);
   font-size: 15px;
+  font-weight: lighter;
 }
 
 
@@ -37,11 +38,28 @@ h2{
 
 .bookingform p{
   margin: 0;
-  padding: 0;
+  padding: 1%;
   font-weight: bold;
 }
 
 .bookingform input{
   width: 100%;
   margin-bottom: 20px;
+}
+
+.bookingform select{
+  width: 30%;
+  text-align: justify;
+}
+
+.bookingform select[name = "school"]{
+  transform: translate(150%, 0);
+}
+
+.bookingform select[name = "course_code"]{
+  transform: translate(165%, 0);
+}
+
+.bookingform select[name = "coordinator_id"]{
+  transform: translate(70%, 0);
 }

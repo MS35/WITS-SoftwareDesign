@@ -12,17 +12,30 @@
           <span style="color: red">   NO HAND WRITTEN FORMS WILL BE ACCEPTED.</span>
         </h2>
         <form>
-          <p style="color: blue">Please Enter Department Name</p>
-          <select name="school" placeholder="Enter Department Name">
-            <option value = "csam">CSAM</option>
-            <option value = "mathematics">Mathematics</option>
-          </select>
-          <p style="color: blue">Please Enter Course Code</p>
-          <input type="text" name="course_code" placeholder="Enter Course Code">
-          <p style="color: blue">Please Enter Course Name</p>
-          <input type="text" name="course_name" placeholder="Enter Course Name">
-          <p style="color: blue">Name Of Course Co-ordinator/ Contact Person For the Course</p>
-          <input type="text" name="coordinator_id" placeholder="Enter Co-ordinator/ Contact Person">
+          <p style="color: blue">Please Enter Department Name
+            <select name="school">
+              <option value = "default_school">Enter Department Name</option>
+              <option value = "csam">CSAM</option>
+              <option value = "mathematics">Mathematics</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Please Enter Course Code
+            <select name="course_code">
+              <option value = "default_course_code">Select a Course Code</option>
+              <option value = "COMS3009">coms3009</option>
+              <option value = "math1036">math1036</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Name Of Course Co-ordinator/ Contact Person For the Course
+            <select name="coordinator_id">
+              <option value = "default_coordinator_id">Select a Coordinator/Contact Person</option>
+              <option value = "1432706">Motheo</option>
+              <option value = "1418198">Simphiwe</option>
+            </select>
+          </p>
+          
         </form>
       </div>
     </body>
