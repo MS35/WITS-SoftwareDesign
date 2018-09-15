@@ -56,7 +56,7 @@ include 'databaseConnect.php';
             $acc = new access();
             $acc->accessBad($failed);
             //return $failed;
-            die();
+            //die();
         }
         $con->closeConnection();
 ?>
