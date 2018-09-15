@@ -3,13 +3,9 @@ php:
 - 5.4
 - 5.5
 - 5.6
-service:
-- mysql
 before_script:
 - travis_retry composer self-update
 - composer install
-before_install:
-- mysql -u root --default-character-set=utf8 venue_allocations_db < db/venue_allocations_db.sql
 script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
