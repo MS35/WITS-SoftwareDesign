@@ -53,8 +53,8 @@ include 'databaseConnect.php';
             }
         } else {
             $failed = "failed";
-            //$acc = new access();
-            //$acc.access($failed);
+            $acc = new access();
+            $acc->accessBad($failed);
             //return $failed;
             die();
         }
