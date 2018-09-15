@@ -1,4 +1,5 @@
 <?php
+    namespace MS35\WitsSoftwareDesign;
     class connect
     {
         function connectDetail()
