@@ -12,7 +12,8 @@ class accessTest extends PHPUnit_Framework_TestCase
      * @covers ::accessBad
      */
     public function testAccess(){
-        $this->assertSame('failed',$this->result->accessBad());
-        //$this->assertSame('success',$thid->result->accessGood());
+        //$this->assertSame('failed',$this->result->accessBad());
+        $this->assertSame('failed',$this->result->accessGood());
+        $this->assertTrue(is_string($this->result->accessGood(), "Got a " . gettype($this->result->accessGood()) . " instead of a string");
     }
 }
