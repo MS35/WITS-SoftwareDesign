@@ -9,7 +9,6 @@ before_script:
 - travis_retry composer self-update
 - composer install
 before_install:
-- mysql -e 'CREATE DATABASE IF NOT EXISTS venue_allocations_db;'
 - mysql -u root --default-character-set=utf8 venue_allocations_db < db/venue_allocations_db.sql
 script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
