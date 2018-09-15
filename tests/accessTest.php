@@ -14,15 +14,6 @@ class accessTest extends PHPUnit_Framework_TestCase
     public function setUp(){
         $this->result = new \MS35\WitsSoftwareDesign\access();
     }
-
-    /**
-     * @covers ::accessGood
-     */
-    public function testAccess()
-    {
-        $this->assertSame('success',$this->result->accessGood());
-    }
-
     /*
      * @covers ::accessBad
      */
