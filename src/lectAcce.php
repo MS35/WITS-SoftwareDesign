@@ -59,4 +59,3 @@ include 'databaseConnect.php';
             //die();
         }
         $con->closeConnection();
-?>
