@@ -3,8 +3,8 @@
         <directory>./tests</directory>
     </testsuite>
     <filter>
-        <whitelist>
-            
+        <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/</directory>
         </whitelist>
     </filter>
 </phpunit>
