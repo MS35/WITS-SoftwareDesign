@@ -1,4 +1,5 @@
 <?php
+namespace MS35\WitsSoftwareDesign;
 include 'databaseConnect.php';
 
 /* Select queries return a resultset */
