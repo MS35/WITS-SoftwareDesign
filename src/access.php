@@ -4,13 +4,15 @@ include 'connect.php';
 
 /* Select queries return a resultset */
         class access{
-            public function accessGood(){
-                $args = func_get_args();
-                return $args[0];
+            public function accessGood($value){
+                //$args = func_get_args();
+                //return $args[0];
+                return $value;
             }
-            public function accessBad(){
-                $args = func_get_args();
-                return $args[0];
+            public function accessBad($value){
+                //$args = func_get_args();
+                //return $args[0];
+                return $value;
             }
         }
         $con = new connect();//this is the class with the server connection details, so here you are writing the
