@@ -1,6 +1,6 @@
 <?php
 namespace MS35\WitsSoftwareDesign;
-include 'databaseConnect.php';
+include 'connect.php';
 
 /* Select queries return a resultset */
         class access{
