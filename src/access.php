@@ -7,12 +7,12 @@ include 'connect.php';
             public function accessGood($value){
                 //$args = func_get_args();
                 //return $args[0];
-                return $value;
-            }
-            public function accessBad($value){
-                //$args = func_get_args();
-                //return $args[0];
-                return $value;
+                    if($value=="success"){
+                        return 'success';
+                    }
+                    else if($value=="failed"){
+                            return 'failed';
+                    }
             }
         }
         $con = new connect();//this is the class with the server connection details, so here you are writing the
