@@ -4,7 +4,7 @@ include 'connect.php';
 
 /* Select queries return a resultset */
         class access{
-            public function accessGood($value){
+            public function accessBad($value){
                 //$args = func_get_args();
                 //return $args[0];
                     if($value=="success"){
