@@ -92,3 +92,33 @@ h3{
   border-bottom: 5% solid black;
   width: 300px;
 }
+
+.bookingform table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.bookingform table, th, td {
+   border: 4px solid black;
+   float: center;
+   padding: 20px 0px 20px 20px;
+   height: 10%;
+   text-align: center;
+
+}
+
+.bookingform input[type = "submit"]{
+  border: none;
+  outline: none;
+  margin: 30px;
+  float: center;
+  height: 40px;
+  font-size: 18px;
+  background: #808080;
+  border-radius: 20px;
+}
+.bookingform input[type = "submit"]:hover{
+  cursor: pointer;
+  background: #89cff0;
+  color: #000;
+}
