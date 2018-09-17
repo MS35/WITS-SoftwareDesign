@@ -9,11 +9,10 @@ class accessTest extends PHPUnit_Framework_TestCase
         $this->result = new \MS35\WitsSoftwareDesign\access();
     }
     /*
-     * @covers ::accessGood
+     * @covers ::accessBad
      */
     public function testAccess(){
         //$this->assertSame('failed',$this->result->accessBad());
-        $this->assertSame('failed',$this->result->accessGood());
-        $this->assertNotNull($this->result->accessGood());
+        $this->assertNotNull($this->result->accessBad());
     }
 }
