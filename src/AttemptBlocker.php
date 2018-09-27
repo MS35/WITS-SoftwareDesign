@@ -1,4 +1,5 @@
 <?php
+    namespace MS35\WitsSoftwareDesign;
     include_once('connect.php');
     include_once('getIpAddress.php');
     class AttemptBlocker
