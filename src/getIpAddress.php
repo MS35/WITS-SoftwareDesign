@@ -1,5 +1,6 @@
 <?php
     //include 'AttemptBlocker.php';
+    namespace MS35\WitsSoftwareDesign;
     class ip
     {
         function getRealIPAddr()//this gets the ip of the person using the html file
