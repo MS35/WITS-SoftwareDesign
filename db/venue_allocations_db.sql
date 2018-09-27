@@ -1,3 +1,4 @@
+drop database if exists venue_allocations_db;
 create database venue_allocations_db;
 use venue_allocations_db;
 
@@ -60,6 +61,37 @@ create table bookings
   foreign key (class_id) references classes (class_id)
 );
 
+create table user_access
+(
+  user_id  varchar(15) not null,
+  password varchar(20) not null,
+  constraint user_access_user_id_uindex
+  unique (user_id),
+  constraint user_access_users_user_id_fk
+  foreign key (user_id) references users (user_id)
+);
+
+create table venue_requests
+(
+  request_id         int auto_increment,
+  booking_id         int        not null,
+  class_size         int        not null,
+  data_projector     tinyint(1) not null,
+  overhead_projector tinyint(1) not null,
+  screens            tinyint(1) not null,
+  speakers           tinyint(1) not null,
+  hdmi_cables        tinyint(1) not null,
+  vga_cables         tinyint(1) not null,
+  document_camera    tinyint(1) not null,
+  constraint venues_request_request_id_uindex
+  unique (request_id),
+  constraint venues_request_bookings_booking_id_fk
+  foreign key (booking_id) references bookings (booking_id)
+);
+
+alter table venue_requests
+  add primary key (request_id);
+
 create table venues
 (
   venue_code         varchar(8)  not null
@@ -69,13 +101,13 @@ create table venues
   venue_type         varchar(15) not null,
   venue_campus       varchar(30) not null,
   venue_location     varchar(20) not null,
-  data_projector     tinyint(1)  null,
-  overhead_projector tinyint(1)  null,
-  screens            tinyint(1)  null,
-  speakers           tinyint(1)  null,
-  hdmi_cables        tinyint(1)  null,
-  vga_cables         tinyint(1)  null,
-  document_camera    tinyint(1)  null
+  data_projector     tinyint(1)  not null,
+  overhead_projector tinyint(1)  not null,
+  screens            tinyint(1)  not null,
+  speakers           tinyint(1)  not null,
+  hdmi_cables        tinyint(1)  not null,
+  vga_cables         tinyint(1)  not null,
+  document_camera    tinyint(1)  not null
 );
 
 create table allocations
@@ -88,5 +120,4 @@ create table allocations
   constraint ALLOCATIONS_venues_venue_code_fk
   foreign key (venue_code) references venues (venue_code)
 );
-
 
