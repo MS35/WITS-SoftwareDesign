@@ -9,7 +9,7 @@ before_script:
 - travis_retry composer self-update
 - composer install
 - mysql -u root -e 'CREATE DATABASE d1312548;'
-- mysql -u root -e 'CREATE USER 's1312548'@'localhost' IDENTIFIED BY 's1312548';'
+- mysql -u root -e 'CREATE USER 's1312548@localhost' IDENTIFIED BY 's1312548';'
 script: 
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
