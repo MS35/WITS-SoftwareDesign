@@ -46,7 +46,7 @@ include_once('AttemptBlocker.php');
                                     //this takes you to the navigate html page
                                     $success = "success";
                                     //this is from the class access
-                                    $acc = new lectAcce();
+                                    $acc = new access();
                                     $acc->accessGood($success);
                                     header("Location:Navigate.html");
                                     exit();
@@ -55,13 +55,13 @@ include_once('AttemptBlocker.php');
                                     //include 'Create.html';
                                     echo "student";
                                     $success = "success";
-                                    $acc = new lectAcce();
+                                    $acc = new access();
                                     $acc->accessGood($success);
                                 }
                                 if ($output[0]["user_role"] == "PIMD") {
                                     echo "PIMD";
                                     $success = "success";
-                                    $acc = new lectAcce();
+                                    $acc = new access();
                                     $acc->accessGood($success);
                                 }
                             }
@@ -77,14 +77,14 @@ include_once('AttemptBlocker.php');
                                 exit();
                             }
                             $failed = "failed";
-                            $acc = new lectAcce();
+                            $acc = new access();
                             $acc->accessBad($failed);
                         }
                     }
                 } else {
 
                     $failed = "failed";
-                    $acc = new lectAcce();
+                    $acc = new access();
                     $acc->accessBad($failed);
                 }
                 $con->closeConnection();
