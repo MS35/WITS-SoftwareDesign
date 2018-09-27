@@ -13,6 +13,6 @@ class AttemptBlockerTest extends \PHPUnit_Framework_TestCase{
      */
     public function testConfirmIPAddress()
     {
-        $this->assertEquals(0,$this->result->confirmIPAddress());
+        $this->assertEquals(0,$this->result->confirmIPAddress('0'));
     }
 }
