@@ -3,14 +3,9 @@ php:
   - 5.4
   - 5.5
   - 5.6
-services:
- -mysql
 before_script:
 - travis_retry composer self-update
 - composer install
-- mysql -u root -e 'CREATE DATABASE d1312548;'
-- mysql -u root -e "CREATE USER 's1312548'@'localhost' IDENTIFIED BY 's1312548';"
-- mysql -u root -e "GRANT ALL ON d1312548.* TO 's1312548'@'localhost';"
 script:- "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
 - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
