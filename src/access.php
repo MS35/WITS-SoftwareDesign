@@ -24,8 +24,6 @@ include_once('AttemptBlocker.php');
                 //this shows the ip address
                 //this gets the userid from the html form
                 $userid = $_POST["username"];
-                //session variable which is sendable between php files 
-                $_SESSION["user_id"]=$userid;
                 //this gets the password from the html form
                 $password = $_POST["password"];
                 //this is the class with the server connection details, so here you are writing the
@@ -45,6 +43,8 @@ include_once('AttemptBlocker.php');
                                     $userInfo[] = $useInf;
                                 }
                             }
+                            $_SESSION["user_id"]=$userid;
+                            $_SESSION["user_role"]=$userInfo[0]["user_role"];    
                             if(mysqli_num_rows($val)){
                                 $atbl = new AttemptBlocker();
                                 if ($atbl->confirmIPAddress($ipString) == 1) {
@@ -57,7 +57,7 @@ include_once('AttemptBlocker.php');
                                         //this is from the class access
                                         $acc = new lectAcce();
                                         $acc->accessGood($success);
-                                        header("Location:Navigate.html");
+                                        header("Location:academicNavigate.html");
                                         exit();
                                     }
                                     if ($userInfo[0]["user_role"] == "STUDENT") {
