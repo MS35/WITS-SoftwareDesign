@@ -72,6 +72,8 @@ include_once('AttemptBlocker.php');
                                         $success = "success";
                                         $acc = new lectAcce();
                                         $acc->accessGood($success);
+                                        header("Location:pimdNavigate.html");
+                                        exit();
                                     }
                                 }
                             }
