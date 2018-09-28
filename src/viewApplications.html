@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Applications</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("viewTable").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ViewApplications.php", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <br><div id="viewTable"></div>
+</body>
+</html>

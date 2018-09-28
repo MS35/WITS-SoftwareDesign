@@ -6,7 +6,7 @@ php:
 before_script:
 - travis_retry composer self-update
 - composer install
-script: 
+script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
 - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar

@@ -1,0 +1,124 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url(../resources/wits_logo3_1.png);
+  background-size: auto;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+h1{
+  margin: 0;
+  transform: translate(20%, -300%);
+  padding: 10px 10px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+h2{
+  margin: 10px 10px 10px 10px;
+  padding: 20px 0px 20px 20px;
+  text-align: justify;
+  transform: translate(20%, -120%);
+  font-size: 15px;
+  font-weight: lighter;
+}
+h3{
+  padding: 20px 0px 20px 20px;
+  text-align: center;
+  float: center;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: fantasy;
+  color: red;
+  width: 100%;
+}
+
+
+
+.bookingform{
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.bookingform p{
+  margin: 0;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.bookingform input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.bookingform select{
+  width: 30%;
+  text-align: justify;
+}
+
+.bookingform select[name = "school"]{
+  transform: translate(150%, 0);
+}
+
+.bookingform select[name = "course_code"]{
+  transform: translate(165%, 0);
+}
+
+.bookingform select[name = "coordinator_id"]{
+  transform: translate(71%, 0);
+}
+
+.bookingform select[name = "instruction"]{
+  transform: translate(135%, 0);
+}
+
+.bookingform select[name = "size"]{
+  transform: translate(65%, 0);
+}
+
+.bookingform select[name = "length"]{
+  text-align: center;
+}
+
+.bookingform input{
+  outline: 0;
+  border-width: 2% 2% 2%;
+  border-bottom: 5% solid black;
+  width: 300px;
+}
+
+.bookingform table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.bookingform table, th, td {
+   border: 4px solid black;
+   float: center;
+   padding: 20px 0px 20px 20px;
+   height: 10%;
+   text-align: center;
+
+}
+
+.bookingform input[type = "submit"]{
+  border: none;
+  outline: none;
+  margin: 30px;
+  float: center;
+  height: 40px;
+  font-size: 18px;
+  background: #808080;
+  border-radius: 20px;
+}
+.bookingform input[type = "submit"]:hover{
+  cursor: pointer;
+  background: #89cff0;
+  color: #000;
+}

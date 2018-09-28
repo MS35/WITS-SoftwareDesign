@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Academic Venue Booking Form</title>
+      <link rel="stylesheet" type="text/css" href="create.css">
+    <body>
+      <div class="bookingform">
+      <img src="../../resources/wits_logo.jpg" class="wits_logo">
+        <h1 style="color: blue;">Academic Venue Booking Form </h1>
+        <h2>
+          <span style="color: green"> THIS IS AN ELECTRONIC FORM. MOST OF THE INFORMATION IS CONTAINED IN THE DROP DOWN LISTS.
+            PLEASE USE THIS LIST WHERE POSSIBLE.</span><br/>
+          <span style="color: red">   NO HAND WRITTEN FORMS WILL BE ACCEPTED.</span>
+        </h2>
+        <form>
+          <p style="color: blue">Please Enter Department Name
+            <select name="school">
+              <option value = "default_school">Enter Department Name</option>
+              <option value = "csam">CSAM</option>
+              <option value = "mathematics">Mathematics</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Please Enter Course Code
+            <select name="course_code">
+              <option value = "default_course_code">Select a Course Code</option>
+              <option value = "COMS3009">coms3009</option>
+              <option value = "math1036">math1036</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Name Of Course Co-ordinator/ Contact Person For the Course
+            <select name="coordinator_id">
+              <option value = "default_coordinator_id">Select a Coordinator/Contact Person</option>
+              <option value = "1432706">Motheo</option>
+              <option value = "1418198">Simphiwe</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Type of Instruction(Choose From List)
+            <select name="instruction">
+              <option value = "default_instruction">--Select--</option>
+              <option value = "lectureWP">Lecture Hall/W-Projector</option>
+              <option value = "lectureWOP">Lecture Hall Without-Projector</option>
+            </select>
+          </p>
+
+          <p style="color: blue">Size Of Venue Required i.e. Seating Budgeted Capacity For 2018
+            <select name="size">
+              <option value = "default_size">--Select--</option>
+              <option value = "fifty">0 - 50</option>
+              <option value = "100">50 - 100</option>
+            </select>
+          </p>
+
+          <hr>
+
+
+          <p style="color: red"><u>Please Indicate the Length of the Course (Choose from Drop Down List)</u></p>
+
+          <p style="color: blue; font-size: 80%">
+            <span style="float: left">Full Academic Year (Full Year/ All Year)</span>
+            <span style="float: righTEL No.t">Ref to the ALMANAC</span>
+          </p>
+            <p style="color: blue; font-size: 80%">
+              <span style="float: left">First Semester (BL1 & BL2)</span>
+            <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p style="color: blue; font-size: 80%">
+            <span style="float: left">Second Semester (BL3 & BL4)</span>
+            <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p style="color: blue; font-size: 80%">
+            <span style="float: left">Block 1 (BL1)</span>
+            <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p style="color: blue; font-size: 80%">
+            <span style="float: left">Block 2 (BL2)</span>
+            <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p style="color: blue; font-size: 80%">
+            <span style="float: left">Block 3 (BL3)</span>
+            <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p style="color: blue; font-size: 80%">
+              <span style="float: left">Block 4 (BL4)</span>
+              <span style="float: right">Ref to the ALMANAC</span>
+          </p>
+          <p>
+            <select name="length">
+            <option value = "default_length">--Select--</option>
+            <option value = "full_year">Full Year (All Year)</option>
+            <option value = "first_semester">1st Semester(BL1 & BL2)</option>
+            <option value = "bl1">Block 1(BL1)</option>
+            <option value = "bl2">Block 2(BL2)</option>
+            <option value = "second_semester">2nd Semester(BL3 & BL4)</option>
+            <option value = "bl3">Block 3(BL3)</option>
+            <option value = "bl4">Block 4(BL4)</option>
+          </select>
+        </p>
+
+        <hr>
+
+        <p style="color: blue; font-weight: normal;">
+          <span style="float: center">DATE: <input placeholder=" "type="text"></input></span>
+        </p>
+        <p style="color: blue; font-weight: normal;">
+          <span style="float: left">PRINT NAME: <input placeholder=" "type="text"></input></span>
+          <span style="float: center">TEL No.: <input placeholder=" "type="text"></input></span>
+        </p>
+        <p style="color: blue; font-weight: normal;">
+          <span style="float: left">DESIGNATION: <input placeholder=" "type="text"></input></span>
+          <span style="float: center">E-MAIL: <input placeholder=" "type="text"></input></span>
+        </p>
+
+        <h3>
+          PLEASE NOTE THAT NO E-MAIL COPIES WILL BE ACCEPTED AND THAT ALL
+          FORMS MUST BE NUMBERED ON THE TOP RIGHT HAND CORNER.
+          ALL FORMS ARE TO BE SUBMITTED TO YOUR FACULTY REGISTRAR TO BE CAPTURED ON SIMS.
+        </h3>
+        <h3 style="color: green;">
+          <span>PLEASE CONFIRM THAT THE INFORMATION CONTAINED ON THIS FORM
+           IS CORRECT AT THE TIME OF SUBMISSION.</span>
+           <span style="float: right"><input type="checkbox" name="verify" value="Please verify that the information given is true"></span>
+        </h3>
+
+
+        <input type="submit" name="submit" value="SUBMIT" onclick="submit_form()">
+
+        </form>
+      </div>
+    </body>
+  </head>
+</html>
+b
