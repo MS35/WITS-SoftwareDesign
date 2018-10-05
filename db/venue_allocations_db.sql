@@ -2,6 +2,23 @@ drop database if exists venue_allocations_db;
 create database venue_allocations_db;
 use venue_allocations_db;
 
+create table slots
+(
+  slot_num   int        not null,
+  start_time time       not null,
+  end_time   time       not null,
+  day        varchar(9) not null,
+  constraint slots_end_time_uindex
+  unique (end_time),
+  constraint slots_slot_num_uindex
+  unique (slot_num),
+  constraint slots_start_time_uindex
+  unique (start_time)
+);
+
+alter table slots
+  add primary key (slot_num);
+
 create table users
 (
   user_id           varchar(15) not null
@@ -48,18 +65,21 @@ create table classes
 
 create table bookings
 (
-  booking_id         int auto_increment
-    primary key,
+  booking_id         int auto_increment,
+  booker_id          varchar(15) not null,
   class_id           int         not null,
-  class_size         int         not null,
-  scheduled_day      varchar(10) not null,
-  start_time         time        not null,
-  end_time           time        not null,
   activity_type      varchar(10) not null,
   active_year_period varchar(4)  not null,
+  constraint bookings_booking_id_uindex
+  unique (booking_id),
   constraint BOOKINGS_classes_class_id_fk
-  foreign key (class_id) references classes (class_id)
+  foreign key (class_id) references classes (class_id),
+  constraint bookings_users_user_id_fk
+  foreign key (booker_id) references users (user_id)
 );
+
+alter table bookings
+  add primary key (booking_id);
 
 create table user_access
 (
@@ -92,6 +112,17 @@ create table venue_requests
 alter table venue_requests
   add primary key (request_id);
 
+create table slot_requests
+(
+  request_id int not null,
+  slot_num   int not null,
+  primary key (request_id, slot_num),
+  constraint slot_requests_slots_slot_num_fk
+  foreign key (slot_num) references slots (slot_num),
+  constraint slot_requests_venue_requests_request_id_fk
+  foreign key (request_id) references venue_requests (request_id)
+);
+
 create table venues
 (
   venue_code         varchar(8)  not null
@@ -113,11 +144,16 @@ create table venues
 create table allocations
 (
   venue_code varchar(10) not null,
-  booking_id int         not null,
-  primary key (venue_code, booking_id),
-  constraint ALLOCATIONS_bookings_booking_id_fk
-  foreign key (booking_id) references bookings (booking_id),
+  request_id int         not null,
+  year_block varchar(3)  not null,
+  slot_num   int         not null,
+  primary key (venue_code, request_id),
   constraint ALLOCATIONS_venues_venue_code_fk
-  foreign key (venue_code) references venues (venue_code)
+  foreign key (venue_code) references venues (venue_code),
+  constraint allocations_slots_slot_num_fk
+  foreign key (slot_num) references slots (slot_num),
+  constraint allocations_venue_requests_request_id_fk
+  foreign key (request_id) references venue_requests (request_id)
 );
+
 
