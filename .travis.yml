@@ -10,6 +10,7 @@ before_script:
 - composer install
 before_install:
 - mysql -e 'CREATE DATABASE d1312548;'
+- mysql -u root -e "CREATE USER 's1312548'@'localhost' IDENTIFIED BY 's1312538';"
 script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
