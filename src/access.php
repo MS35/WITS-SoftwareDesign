@@ -18,7 +18,7 @@ include_once('AttemptBlocker.php');
              *
              */
             public function lec(){
-                session_start();
+                //session_start();
                 $ip = new ip();
                 $ipString = $ip->getRealIPAddr();
                 //this shows the ip address
