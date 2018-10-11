@@ -3,9 +3,13 @@ php:
   - 5.4
   - 5.5
   - 5.6
+services:
+- mysql
 before_script:
 - travis_retry composer self-update
 - composer install
+before_install:
+- mysql -e 'CREATE DATABASE d1312548;'
 script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
