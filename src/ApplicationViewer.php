@@ -6,7 +6,7 @@
  * Time: 05:08
  */
 
-include "DBConnector.php";
+include_once "DBConnector.php";
 
 class ApplicationViewer
 {
@@ -17,14 +17,13 @@ class ApplicationViewer
     }
 
     public function findApplicationsUser($user_id){
-        do{
-            $isConnected = $this->connector->createConnection();
-        }while(!$isConnected);
 
-        $connection = $this->connector->getConnection();
+        $connection = mysqli_connect('localhost', 'venues_db_user', 'venues!@#', 'venue_allocations_db');
 
-        mysqli_query($connection,"USE venue_allocations_db");
-
+        if(!$connection){
+            die("connection failed");
+        }
+        
         $query = "SELECT classes.course_code, classes.class_id, diagonal, bookings.booking_id,
        bookings.class_size, scheduled_day, start_time, end_time, activity_type,
        active_year_period, data_projector, overhead_projector, screens, speakers,
@@ -39,15 +38,9 @@ class ApplicationViewer
         AND bookings.class_id=classes.class_id
         AND venue_requests.booking_id=bookings.booking_id)";
 
-        $stmt = mysqli_stmt_init($connection);
-        if(!mysqli_stmt_prepare($stmt, $query))
-        {
-            print "Failed to prepare statement\n";
-        }
-        else
-        {
-            mysqli_stmt_bind_param($stmt, "s", $user_id);
-            mysqli_stmt_execute($stmt);
+        $stmt = mysqli_stmt_prepare($connection, $query);
+        mysqli_stmt_bind_param($stmt, "s", $user_id);
+        mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
             $table = "<table><tr>
@@ -77,16 +70,12 @@ class ApplicationViewer
                 }
                 $table = $table."</tr>";
             }
-        }
+
         $table = $table."</table>";
 
         mysqli_stmt_close($stmt);
 
-        do{
-            $isConnClosed = $this->connector->closeConnection();
-        }while(!$isConnClosed);
-
-        return $table;
+        mysqli_close($connection);
     }
 
     public function findApplicationsPIMD(){

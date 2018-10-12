@@ -6,7 +6,8 @@
       <div class="loginbox">
       <img src="wits_logo.jpg" class="wits_logo">
         <h1 style="color: blue;">Login </h1>
-        <form action="lectAcce.php" method="post" >
+        <form  method="post" >
+          <?php header("Location: access.php"); ?>
           <p style="color: blue">Username</p>
           <input type="text" name="username" placeholder="Enter Username">
 

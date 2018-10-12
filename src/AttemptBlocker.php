@@ -19,12 +19,11 @@
                     //echo $time2."\n";
                     //echo date('i');
                     if ($output[0]["Attempts"] >= 3) {
-
                         if (abs(date('i.s') - date('i.s', strtotime($time2))) <= 2) {
                             return 1;
                         } else {
                             $this->clearLoginAttempts($value);
-                            return 0;
+                            return 1;
                         }
                     }
                 }else{
@@ -43,23 +42,23 @@
             $q = "SELECT * FROM LoginAttempts WHERE IP = '$value'";
             $result = mysqli_query($con->connectDetail(),$q);
             $data = mysqli_fetch_array($result);
-
             if ($data) {
                 $attempts = $data["Attempts"] + 1;
-
                 if ($attempts == 3) {
                     $q = "UPDATE LoginAttempts SET attempts=" . $attempts . ", LastLogin=NOW() WHERE ip = '$value'";
                     $result = mysqli_query($con->connectDetail(),$q);
+                    return 0;
                 } else {
                     $q = "UPDATE LoginAttempts SET attempts=" . $attempts . " WHERE ip = '$value'";
                     $result = mysqli_query($con->connectDetail(),$q);
+                    return 0;
                 }
             } else {
                 $q = "INSERT INTO LoginAttempts (Attempts,IP,LastLogin) values (1, '$value', NOW())";
                 $result = mysqli_query($con->connectDetail(),$q);
+                return 1;
             }
         }
-
         function clearLoginAttempts($value)
         {
             $con = new connect();

@@ -3,9 +3,14 @@ php:
   - 5.4
   - 5.5
   - 5.6
+services:
+- mysql
 before_script:
 - travis_retry composer self-update
 - composer install
+- mysql -u root -e  'CREATE DATABASE d1312548;'
+- mysql -u root -e "CREATE user 's1312548'@'localhost' IDENTIFIED BY 's1312548';"
+- mysql -u root -e "GRANT ALL ON d1312548.* TO 's1312548'@'localhost';"
 script:
 - "phpunit --testsuite=unit --coverage-clover coverage.xml"
 after_script:
