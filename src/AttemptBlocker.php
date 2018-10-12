@@ -24,7 +24,7 @@
                             return 1;
                         } else {
                             $this->clearLoginAttempts($value);
-                            return 1;
+                            return 0;
                         }
                     }
                 }else{
@@ -50,16 +50,13 @@
                 if ($attempts == 3) {
                     $q = "UPDATE LoginAttempts SET attempts=" . $attempts . ", LastLogin=NOW() WHERE ip = '$value'";
                     $result = mysqli_query($con->connectDetail(),$q);
-                    return 0;
                 } else {
                     $q = "UPDATE LoginAttempts SET attempts=" . $attempts . " WHERE ip = '$value'";
                     $result = mysqli_query($con->connectDetail(),$q);
-                    return 0;
                 }
             } else {
                 $q = "INSERT INTO LoginAttempts (Attempts,IP,LastLogin) values (1, '$value', NOW())";
                 $result = mysqli_query($con->connectDetail(),$q);
-                return 1;
             }
         }
 

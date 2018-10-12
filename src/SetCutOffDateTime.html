@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Venue Booking Deadline</title>
+
+<body>
+<h1>Venue Booking Deadline</h1>
+
+<p>Set the deadline for booking venues</p>
+
+<p>
+    <iframe src="currentDeadline.php" style="border:none; width: 50%; height:40px" ></iframe>
+</p>
+
+<form action="SetNewDeadline.php" method="post">
+    <p>
+        Choose the cut-off date:<br>
+        <input type="date" name="cut_off_date" required>
+    </p>
+    <p>
+        Select the cut-off time:<br>
+        <input type="time" name="cut_off_time" required>
+    </p>
+
+    <input type="submit" name="submit" value="Set Deadline">
+</form>
+</body>
+</head>
+</html>

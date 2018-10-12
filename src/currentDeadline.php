@@ -5,7 +5,7 @@
  * Date: 11 Oct 2018
  * Time: 04:52
  */
-include "DeadlineSetter.php";
+include_once "DeadlineSetter.php";
 
 $dls = new DeadlineSetter();
 $curr_deadline_date = $dls->getDate();
