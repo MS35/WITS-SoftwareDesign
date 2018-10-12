@@ -1,0 +1,26 @@
+h1{
+  color: #00FFFF;
+}
+
+body{
+  background-color: #dcdcdc;
+  background-image: url("wits_logo1.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 900px;
+  background-blend-mode: hard-light;
+}
+
+p{
+  margin: 2px 2px 2px 2px;
+  padding: 2px 6px 2px 6px;
+  color: blue;
+}
+
+input{
+  margin: 2px 2px 2px 2px;
+  padding: 2px 6px 2px 6px;
+  color: blue;
+  border-width: medium;
+  background: #d3d3d3;
+}

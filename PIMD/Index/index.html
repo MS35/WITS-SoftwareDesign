@@ -1,0 +1,173 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PIMD Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- how it works -->
+    <link href="css/timeline.css" type="text/css" rel="stylesheet" media="all">
+    <!-- grid hover -->
+    <link href="css/hover.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!-- //online-fonts -->
+</head>
+
+<body>
+<!-- banner -->
+<div class="banner" id="home">
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-gradient-secondary">
+          <div class="container-fluid">
+          <h1>
+                <a class="navbar-brand text-white" href="index.html">
+                    PIMD Venue System
+                </a>
+            </h1>
+            <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto text-center">
+                    <li class="nav-item active  mr-lg-3 mt-lg-0 mt-3">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mr-lg-3 mt-lg-0 mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="appDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Application
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appDropdown">
+                            <a class="nav-link" href="application.html">Create</a>
+                            <a class="nav-link" href="#update">Update</a>
+                            <a class="nav-link" href="#delete">Delete</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-lg-3 mt-lg-0 mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="allocDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Bookings
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="allocDropdown">
+                            <a class="nav-link scroll" href="#view">View</a>
+                            <a class="nav-link" href="#">Set Due Date</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mr-lg-3 mt-lg-0 mt-3">
+                        <a class="nav-link scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <button type="button" class="btn  ml-lg-2 w3ls-btn" data-toggle="modal" aria-pressed="false"
+                                data-target="#exampleModal">
+                            <i class="far fa-user-circle"></i>
+                        </button>
+                    </li>
+
+                    <li class="nav-item active  mr-lg-3 mt-lg-0 mt-3">
+                        <a class="nav-link" href="Login.html">Logout
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                </ul>
+              </div>
+            </div>
+
+        </nav>
+    </header>
+    <!-- //header -->
+    <div class="container">
+        <div class="banner-text">
+            <div class="slider-info">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- contact -->
+
+
+<!-- footer -->
+<div class="footerv4-w3ls" id="footer">
+    <div class="footerv4-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 footv4-left">
+                    <p style=" color: white; font-weight: heavy; text-align: left;">The system is currently in developement
+                       and so there are no available bookings to view as yet. Sorry for the inconvenience
+                    </p>
+
+
+
+                </div>
+                    <!-- //footer social -->
+
+
+
+            </div>
+        </div>
+        <!-- /footerv4-top -->
+    </div>
+</div>
+<!-- //footer -->
+
+<!-- logout  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="right-w3l">
+                    <input type="submit" class="inline" id="slide_yes_button" style = "height:100px;width:210px" value="Yes">
+                    <input type="submit" class="inline" id="slide_no_button"  style = "height:100px;width:210px" value="No">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //logout -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- for the yes or no buttons to logout -->
+<!-- //js -->
+<!-- start-smooth-scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //smooth-scrolling-of-move-up -->
+<script src="js/counter.js"></script>
+<!-- //stats -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
