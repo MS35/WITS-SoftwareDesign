@@ -59,6 +59,7 @@ include_once('AttemptBlocker.php');
                                         $acc->accessGood($success);
                                         header("Location:academicNavigate.html");
                                         exit();
+                                        return 0;
                                     }
                                     if ($userInfo[0]["user_role"] == "STUDENT") {
                                         //include 'Create.html';
@@ -66,6 +67,7 @@ include_once('AttemptBlocker.php');
                                         $success = "success";
                                         $acc = new lectAcce();
                                         $acc->accessGood($success);
+                                        return 0;
                                     }
                                     if ($userInfo[0]["user_role"] == "PIMD") {
                                         echo "PIMD";
@@ -74,6 +76,7 @@ include_once('AttemptBlocker.php');
                                         $acc->accessGood($success);
                                         header("Location:pimdNavigate.html");
                                         exit();
+                                        return 0;
                                     }
                                 }
                             }
@@ -87,10 +90,12 @@ include_once('AttemptBlocker.php');
                                 $atbl->addLoginAttempt($ipString);
                                 header("Location:Login.html");
                                 exit();
+                                return 1;
                             }
                             $failed = "failed";
                             $acc = new access();
                             $acc->accessBad($failed);
+                            return 1;
                         }
                     }
                 } else {
@@ -98,6 +103,7 @@ include_once('AttemptBlocker.php');
                     $failed = "failed";
                     $acc = new access();
                     $acc->accessBad($failed);
+                    return 1;
                 }
                 $con->closeConnection();
             }
