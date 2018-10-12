@@ -5,7 +5,7 @@
  * Date: 11 Oct 2018
  * Time: 05:46
  */
-include_once "DeadlineSetter.php";
+include "DeadlineSetter.php";
 session_start();
 $new_date = $_POST["cut_off_date"];
 echo $new_date;

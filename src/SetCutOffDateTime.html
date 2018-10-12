@@ -1,30 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
     <title>Set Venue Booking Deadline</title>
+  </head>
+  <body>
+    <div class = "container">
+      <div class = "page-header">
 
-<body>
-<h1>Venue Booking Deadline</h1>
+        <h1>Venue Booking Deadline</h1>
 
-<p>Set the deadline for booking venues</p>
 
-<p>
-    <iframe src="currentDeadline.php" style="border:none; width: 50%; height:40px" ></iframe>
-</p>
 
-<form action="SetNewDeadline.php" method="post">
-    <p>
-        Choose the cut-off date:<br>
-        <input type="date" name="cut_off_date" required>
-    </p>
-    <p>
-        Select the cut-off time:<br>
-        <input type="time" name="cut_off_time" required>
-    </p>
+      </div>
 
-    <input type="submit" name="submit" value="Set Deadline">
-</form>
-</body>
-</head>
+      <div class = "jumbotron" style="background-image: url(images/slide.jpg)">
+
+        <p style="color: black; font-weight: heavy;">
+          <iframe src="currentDeadline.php" style="border:none; width: 50%; height:40px" ></iframe>
+        </p>
+
+        <p style="color: black; font-weight: heavy;">
+          <form  action="SetNewDeadline.php" >
+        <p style="color: black; font-weight: heavy;">
+          Choose the cut-off date:<br>
+          <input style="color: black; font-weight: heavy;" type="date" name="cut_off_date" required>
+        </p>
+        <p style="color: black; font-weight: heavy;">
+          Select the cut-off time:<br>
+          <input style="color: black; font-weight: heavy;" type="time" name="cut_off_time" required>
+        </p>
+
+        <input style="color: black; font-weight: heavy;" type="submit" name="submit" value="Set Deadline">
+        </form>
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
 </html>
