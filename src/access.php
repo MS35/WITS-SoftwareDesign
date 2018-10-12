@@ -22,10 +22,6 @@ include_once('AttemptBlocker.php');
                 $ip = new ip();
                 $ipString = $ip->getRealIPAddr();
                 //this shows the ip address
-                //this gets the userid from the html form
-                $userid = $_POST["username"];
-                //this gets the password from the html form
-                $password = $_POST["password"];
                 //this is the class with the server connection details, so here you are writing the
                 $con = new connect();
                 //this array is going to take in the output from th database
@@ -33,6 +29,10 @@ include_once('AttemptBlocker.php');
                 $userInfo = array();
                 $success="";
                 if (isset($_POST['submit'])) {
+                    //this gets the userid from the html form
+                    $userid = $_POST["username"];
+                    //this gets the password from the html form
+                    $password = $_POST["password"];
                     if ($result = mysqli_query($con->connectDetail(), "SELECT * from user_access where user_id='$userid' and password='$password'")) {
                         while ($row = $result->fetch_assoc()) {
                             $userID[] = $row;//each json object is taken as a row in php
