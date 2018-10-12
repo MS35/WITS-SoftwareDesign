@@ -14,9 +14,13 @@
             elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
                 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
             } else {
-                //$ip = $_SERVER['REMOTE_ADDR'];
+                $ip = $_SERVER['REMOTE_ADDR'];
             }
-            return $ip;
+            if(!empty($ip)){
+                return $ip;
+            }else{
+                return 0;
+            }
         }
     }
 ?>
