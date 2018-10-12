@@ -14,5 +14,7 @@ class accessTest extends \PHPUnit_Framework_TestCase{
     public function testlec()
     {
         $this->assertNotNull($this->result->lec());
+        //$this->assertEquals(0,$this->result->lec());
+        $this->assertEquals(1,$this->result->lec());
     }
 }
