@@ -16,7 +16,11 @@
             } else {
                 //$ip = $_SERVER['REMOTE_ADDR'];
             }
-            return $ip;
+            if(!empty($ip)){
+                return $ip;
+            }else{
+                return 0;
+            }
         }
     }
 ?>
