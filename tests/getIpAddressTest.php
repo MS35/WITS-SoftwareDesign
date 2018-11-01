@@ -2,7 +2,7 @@
 /**
   * @coversDefaultClass \MS35\WitsSoftwareDesign\ip
   */
-  class connectTest extends \PHPUnit_Framework_TestCase{
+  class ipTest extends \PHPUnit_Framework_TestCase{
     protected $result;
     public function setup(){
       $this->result = new \MS35\WitsSoftwareDesign\ip();
