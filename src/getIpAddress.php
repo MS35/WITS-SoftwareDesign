@@ -19,11 +19,6 @@
             }else{
                 return 0;
             }
-            if(!empty($ip)){
-                return $ip;
-            }else{
-                return 0;
-            }
         }
     }
 ?>
