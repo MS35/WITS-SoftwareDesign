@@ -31,7 +31,7 @@
         - pip install coverage
         - pip install nose
         - pip install Pillow
-        - pip3 install --upgrade -r requirements.txt
+        - pip install -r requirements.txt
       script: 
         - nosetests testTryCatch.py --with-coverage
       after_success:
