@@ -20,7 +20,7 @@ class AttemptBlockerTest extends \PHPUnit_Framework_TestCase{
      */
     public function testLoginAttempt()
     {
-          $this->assertEquals(0,$this->result->addLoginAttempt('0'))
-          $this->assertEquals(1,$this->result->addLoginAttempt('0'))
+          $this->assertEquals(0,$this->result->addLoginAttempt('0'));
+          $this->assertEquals(1,$this->result->addLoginAttempt('0'));
     }
 }
