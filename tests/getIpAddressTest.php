@@ -10,7 +10,7 @@
      /*
      * @covers ::getRealIPAddr
      */
-     public function testConnectDetail(){
+     public function testgetRealIPAddr(){
          $this->assertEquals(0,$this->result->getRealIPAddr());
      }
   }
