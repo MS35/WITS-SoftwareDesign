@@ -40,7 +40,7 @@
             //Increase number of attempts. Set last login attempt if required.
             $con = new connect();
             $q = "SELECT * FROM LoginAttempts WHERE IP = '$value'";
-            
+            $data = array();
             if($result = mysqli_query($con->connectDetail(),$q)){
                 $data = mysqli_fetch_array($result);
             }
