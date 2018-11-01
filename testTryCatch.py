@@ -3,6 +3,6 @@ from TryCatch import *
 
 class testTryCatch:
   def testResult(self):
-    try1 = TryCatch(0)
-    res = try1.result(0)
+    try1 = TryCatch()
+    res = try1.result()
     eq_(res,"ok")
