@@ -2,7 +2,7 @@
 /**
  * @coversDefaultClass \MS35\WitsSoftwareDesign\AttemptBlocker
  */
-class AttemptBlockerTest extends \PHPUnit_Framework_TestCase{
+class AttemptBlockerTest2 extends \PHPUnit_Framework_TestCase{
     protected $result;
     
     public function setup(){

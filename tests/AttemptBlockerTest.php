@@ -15,4 +15,11 @@ class AttemptBlockerTest extends \PHPUnit_Framework_TestCase{
     {
         $this->assertEquals(0,$this->result->confirmIPAddress('0'));
     }
+     /*
+     * @covers ::addLoginAttempt
+     */
+    public function testLoginAttempt()
+    {
+          $this->assertEquals(1,$this->result->addLoginAttempt('0'));
+    }
 }

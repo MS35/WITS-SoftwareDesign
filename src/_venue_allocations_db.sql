@@ -1,4 +1,6 @@
-use d1312548;
+drop database if exists venue_allocations_db;
+create database venue_allocations_db;
+use venue_allocations_db;
 
 create table users
 (
