@@ -1,0 +1,19 @@
+LB146,1,1st Semester,2
+B121,3,2nd Semester,20
+CLM102,5,2nd Semester,2
+GLT,7,2nd Semester,23
+CM2,8,1st Semester,5
+CLM102,11,Full Year,15
+C6,12,2nd Semester,15
+CM2,15,2nd Semester,33
+GH403,16,2nd Semester,32
+No venue,19,1st Semester,20
+B121,20,1st Semester,19
+No venue,21,1st Semester,3
+No venue,23,2nd Semester,34
+No venue,24,1st Semester,12
+CLM102,25,1st Semester,23
+CLM102,26,2nd Semester,15
+CLM102,28,2nd Semester,1
+B121,31,1st Semester,15
+B121,32,2nd Semester,40
