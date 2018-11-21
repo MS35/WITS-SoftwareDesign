@@ -8,12 +8,8 @@ create table slots
   start_time time       not null,
   end_time   time       not null,
   day        varchar(9) not null,
-  constraint slots_end_time_uindex
-  unique (end_time),
   constraint slots_slot_num_uindex
-  unique (slot_num),
-  constraint slots_start_time_uindex
-  unique (start_time)
+  unique (slot_num)
 );
 
 alter table slots
@@ -52,7 +48,7 @@ create table courses
 
 create table classes
 (
-  class_id    int auto_increment
+  class_id    varchar(15) not null
     primary key,
   course_code varchar(9)  not null,
   lecturer_id varchar(15) not null,
@@ -67,12 +63,12 @@ create table bookings
 (
   booking_id         int auto_increment,
   booker_id          varchar(15) not null,
-  class_id           int         not null,
+  class_id           varchar(15) not null,
   activity_type      varchar(10) not null,
   active_year_period varchar(4)  not null,
   constraint bookings_booking_id_uindex
   unique (booking_id),
-  constraint BOOKINGS_classes_class_id_fk
+  constraint bookings_classes_class_id_fk
   foreign key (class_id) references classes (class_id),
   constraint bookings_users_user_id_fk
   foreign key (booker_id) references users (user_id)
@@ -99,6 +95,7 @@ create table venue_requests
   data_projector     tinyint(1) not null,
   overhead_projector tinyint(1) not null,
   screens            tinyint(1) not null,
+  sound              tinyint(1) not null,
   speakers           tinyint(1) not null,
   hdmi_cables        tinyint(1) not null,
   vga_cables         tinyint(1) not null,
@@ -135,6 +132,7 @@ create table venues
   data_projector     tinyint(1)  not null,
   overhead_projector tinyint(1)  not null,
   screens            tinyint(1)  not null,
+  sound              tinyint(1)  not null,
   speakers           tinyint(1)  not null,
   hdmi_cables        tinyint(1)  not null,
   vga_cables         tinyint(1)  not null,
@@ -147,13 +145,13 @@ create table allocations
   request_id int         not null,
   year_block varchar(3)  not null,
   slot_num   int         not null,
-  primary key (venue_code, request_id),
-  constraint ALLOCATIONS_venues_venue_code_fk
-  foreign key (venue_code) references venues (venue_code),
-  constraint allocations_slots_slot_num_fk
-  foreign key (slot_num) references slots (slot_num),
+  primary key (venue_code, request_id, year_block, slot_num),
   constraint allocations_venue_requests_request_id_fk
-  foreign key (request_id) references venue_requests (request_id)
+  foreign key (request_id) references venue_requests (request_id),
+  constraint allocations_venues_venue_code_fk
+  foreign key (venue_code) references venues (venue_code)
 );
 
+create index allocations_slots_slot_num_fk
+  on allocations (slot_num);
 
