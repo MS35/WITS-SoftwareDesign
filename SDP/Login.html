@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Login Form</title>
+      <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <body>
+      <div class="loginbox">
+      <img src="images/wits_logo.jpg" class="wits_logo">
+        <h1 style="color: blue;">Login </h1>
+          <p style="color: blue">Username</p>
+          <input type="text" name="username" placeholder="Enter Username" id="username">
+
+          <p style="color: blue">Password</p>
+          <input type="password" name="password" id="password" placeholder="Enter Password">
+            <input type="hidden" name="ip" value="<?=$ip;?>">
+            <input type="submit" name="submit" value="Login" id="user-name">
+          <div id="failed-db" style="color: blue"></div>
+          <div id="eyy-de" style="color: blue"></div>
+          <script src="js/jquery3.js"></script>
+          <script src="js/global.js"></script>
+      </div>
+    </body>
+  </head>
+</html>

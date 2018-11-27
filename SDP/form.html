@@ -1,0 +1,185 @@
+
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta tags -->
+	<title>Venue Application</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/formstyle.css">
+	<!-- google fonts  -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+</head>
+<body>
+	<div class="w3ls-banner">
+	<div class="heading">
+				<h1>Venue Application Form</h1>
+	</div>
+		<div class="container">
+			<div class="agile-form">
+				<form action="CourseFeasableNew.php" method="post">
+					<ul class="field-list">
+                        <li>
+                            <label class="form-label">
+                                Type of instruction
+                                <span class="form-required"> * </span>
+                            </label>
+                            <div class="form-input drop">
+								<span class="form-sub-label">
+									<select name="instruction">
+										<option>&nbsp;</option>
+										<option value="Lecture" id="lec"> Lecture </option>
+										<option value="Tutorial" id="tut"> Tutorial </option>
+									 </select>
+								</span>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Size of venue required
+                                <span class="form-required"> * </span>
+                            </label>
+                            <div class="form-input">
+                                <input type="text" name="class_size" placeholder="Size">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Number of booking
+                            </label>
+                            <div class="form-input">
+                                <input type="text" name="number_of_booking" placeholder="Bookings">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Length of course
+                                <span class="form-required"> * </span>
+                            </label>
+                            <div class="form-input drop">
+                                <select class="form-dropdown" name="length_of_course" required>
+                                    <option value="">&nbsp;</option>
+                                    <option value="FYR" id="ful"> Full Year </option>
+                                    <option value="SEM1" id="SM1"> First Semester </option>
+                                    <option value="SEM2" id="SM2"> Second Semester</option>
+                                    <option value="BLK1" id="BLK1"> Block 1 </option>
+                                    <option value="BLK2" id="BLK2"> Block 2 </option>
+                                    <option value="BLK3" id="BLK3"> Block 3 </option>
+                                    <option value="BLK4" id="BLK4"> Block 4 </option>
+
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Weekday
+                                <span class="form-required"> * </span>
+                            </label>
+                            <div class="form-input drop">
+                                <select class="form-dropdown" name="weekday" required>
+                                    <option value="">&nbsp;</option>
+                                    <option value="Monday" id="mon"> Monday </option>
+                                    <option value="Tuesday" id="tues"> Tuesday </option>
+                                    <option value="Wednesday" id="wed"> Wednesday </option>
+                                    <option value="Thursday" id="thurs"> Thursday </option>
+                                    <option value="Friday" id="fri"> Friday </option>
+
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Time selection
+                                <span class="form-required"> * </span>
+                            </label>
+                            <label class="customcheck"> 08:00 - 08:45
+                                <input type="checkbox" name="period[]" id="p1" value="1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 09:00 - 09:45
+                                <input type="checkbox" name="period[]" id="p2" value="2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 10:15 - 11:00
+                                <input type="checkbox" name="period[]" id="p3" value="3">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 11:15 - 12:00
+                                <input type="checkbox" name="period[]" id="p4" value="4">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 12:30 - 13:15
+                                <input type="checkbox" name="period[]" id="p5" value="5">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 14:15 - 15:00
+                                <input type="checkbox" name="period[]" id="p6" value="6">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 15:15 - 16:00
+                                <input type="checkbox" name="period[]" id="p7" value="7">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> 16:15 - 17:00
+                                <input type="checkbox" name="period[]" id="p8" value="8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="form-label">
+                                Equipment Required
+                                <span class="form-required"> * </span>
+                            </label>
+                            <label class="customcheck"> Screen
+                                <input type="checkbox" name="equip[]" value="screen">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> Speaker
+                                <input type="checkbox" name="equip[]" value="speaker">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> Sound
+                                <input type="checkbox" name="equip[]" value="sound">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> OHP
+                                <input type="checkbox" name="equip[]" value="ohp">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> Document camera
+                                <input type="checkbox" name="equip[]" value="doc_camera">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> HDMI cable
+                                <input type="checkbox" name="equip[]" value="hdmi">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> VGA cable
+                                <input type="checkbox" name="equip[]" value="vga">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="customcheck"> Data projector
+                                <input type="checkbox" name="equip[]" value="projector">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+					</ul>
+                    <a href="apply1.html" class="button" id="back" > Back </a>
+                    <input type="submit" name="back" class="button" id="submit_button" value="Add Booking">
+                    <input type="submit" align="left" name="done" class="button" id="done_button" value="Submit">
+				</form>	
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

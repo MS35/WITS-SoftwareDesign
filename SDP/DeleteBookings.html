@@ -1,0 +1,51 @@
+
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <title>Delete Bookings</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/formstyle.css">
+    <!-- google fonts  -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.post("http://venues.ms.wits.ac.za/test_hloni/findBookingsToDelete.php",{name: ""},
+                function (data) {
+                    $("#output").html(data);
+                });
+        });
+    </script>
+</head>
+<body>
+<div class="w3ls-banner">
+    <div class="heading">
+        <h1>Delete Bookings</h1>
+    </div>
+    <div class="container">
+        <div class="agile-form">
+            <div id="output" class="form"></div>
+            <form action="phpPostViewer.php" method="post" class="form-inline">
+
+                <input type="submit" class="button" id="back" value="Back">
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
